@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "playfair display", serif;/* google font */
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;/* placed in its normal position */
+}
+#navbar{
+    display: flex;/* to make child element to inline on parent*/
+    width: 85%;
+    margin-left: 7%;
+    justify-content: space-between;/* horizontal movement for child tag */
+    align-items: center;/* to place the content verticaly */
+}
+#logo{
+    width: 130px;
+}
+/* class selector */
+.listitem{
+    list-style: none;/* remove the styling of list item */
+    display: inline;/* used for list item to a line */
+    margin-top: 25px;
+    margin: 10px 22px;
+    font-weight: 700;/* to increase boldeness */
+    
+}
+/* pseduo class- used to define a special state of an element eg: hover, active, inactive etc...
+
+syntax ; element:pseudo{property value}*/
+
+li a:hover{
+    color: red;
+    
+
+}
+/* descentant selector */
+li a{
+    text-decoration: none;/* remove underlines */
+    color: black;
+}
+#title{
+    margin-top: 14%;
+    margin-left: 8%;
+}
+#title h1{
+    font-size: 50px;
+}
+#title a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+#images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+}
+.imagegroup{
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 2s;
+}
+#images:hover #shape{
+    bottom: 70px;
+}
+#images:hover #girl{
+    left: 40%;
+}
+
+
+
+
+
+#intro{
+    align-content: center;
+    
+}
+#about{
+    margin: 14% 8% 0 8%;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 30px;
+}
+.heading p{/* decentant selector */
+    color: green;
+    font-size: 20px;
+}
+#content{
+    display: grid;/* to make column or raw */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;/* rem unit means its html element font size. if its not set by any font size, default size will be 16px for 1 rem */
+    margin-top: 2rem;
+    
+}
+#content_img img{
+    width: 80%;
+}
+#content_details{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+}
+#informations{
+    margin-top: 2rem;
+}
+.info{
+    margin-top: 1rem;
+}
+.info span{
+    margin-left: 1rem;
+}
+#skill_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+#skill{
+    margin: 8% 8% 0 8%;
+}
+
+#skill_image img{
+    width: 90%;
+}
+.bar_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+}
+.bar_container span{
+    font-weight: 800;
+    font-size: 20px;
+}
+.bar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: brown;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+
+}
+#html_bar{
+    width: 95%;
+    background-color: orange;
+}
+#css_bar{
+    width: 88%;
+    background-color: orange;
+}
+#js_bar{
+    width: 89%;
+    background-color: orange;
+}
+#react_bar{
+    width: 85%;
+    background-color: orange;
+}
+#contact{
+    margin-top: 5%;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+.icon_set{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid red; */
+    margin: 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+.icon_set i{
+    color: black;
+}
+.icon_set:hover{
+    background-image: linear-gradient(to bottom right, yellow,rgb(114, 75, 4));
+}
+.icon_set:hover i{
+    color: white;
+}
+.icon_set:hover i{
+    animation: anime 0.25s infinite;
+
+}
+@keyframes anime{
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        /* transform: rotateX(100px); */
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        /* transform: rotateX(100px); */
+    }
+}
+footer{
+    padding: 3rem 0px;
+}
+footer p{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+.up-arrow{
+    background-image: linear-gradient(to bottom right, yellow, red);
+    float: right;
+    margin: 13px 50px 50x 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
